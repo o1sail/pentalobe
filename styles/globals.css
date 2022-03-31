@@ -91,7 +91,7 @@ img { /* dangerouslySetInnerHTML用 */
     min-height: 100vh;
     padding: calc(3vh + 30px + 3vh) 2.5vw 0 2.5vw;
     transition: 1s;
-    background-color: white;
+    background-color: lightgrey;
 }
 .hideContent {
     transform: translateX(-100%);
