@@ -42,7 +42,7 @@ export default function BlogPageId(props) {
                                 unoptimized={true}
                                 alt="ペンタローブログ" />
                         </h3>
-                        <h4 className="blogIntroP">修復不可能なときは"Oh wow..."と3回唱えます。
+                        <h4 className="blogIntroP">修復不可能なときは Oh wow... と3回唱えます。
                             <br/>スティーブ・ジョークです。
                         </h4>
                     </div>

@@ -50,7 +50,7 @@ export default function BlogId({ blog, oldestBlog, latestBlog, prevBlog, nextBlo
                         <ul className="blogHeadingCategory">
                             カテゴリー：
                             {blog.category.map((bc) => (
-                                <li className="CategoryText">
+                                <li className="CategoryText" key={bc.category}>
                                     {bc},
                                 </li>
                             ))}
