@@ -82,7 +82,7 @@ export default function Contact() {
                                 />
                             </div>
                             <h4>Line</h4>
-                            <div className="lineqrImgC">
+                            {/* <div className="lineqrImgC">
                                 <Image
                                     src="/lineqr.png"
                                     width={600}
@@ -92,7 +92,7 @@ export default function Contact() {
                                     unoptimized={true}
                                     alt=""
                                 />
-                            </div>
+                            </div> */}
                             <p className="contactLinkP"><a href="">友達に追加</a></p>
                             <p>
                                 LINE電話でのご相談も受け付けております。<br />
@@ -329,6 +329,7 @@ export default function Contact() {
                     font-size: 15px;
                     border: none;
                     border-bottom: 1px solid black;
+                    border-image-width: 0;
                 }
 
                 input:focus, textarea:focus {

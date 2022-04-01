@@ -55,8 +55,9 @@ export default function PriceTable({ pd }) {
                 }
                 .modelName {
                     text-align: center;
-                    font-family: BlinkMacSystemFont;
+                    //font-family: BlinkMacSystemFont;
                     font-weight: bold;
+                    font-size: 20px;
                 }
 
                 .priceTableFrameC {
@@ -77,8 +78,6 @@ export default function PriceTable({ pd }) {
                 th, td {
                     margin: 0;
                     padding: 0;
-                    font-family: "HiraginoSans-W0";
-                    font-weight: 100;
                     font-size: 15px;
                     line-height: 30px; /*一時(fontsize)*/
                     color: black;

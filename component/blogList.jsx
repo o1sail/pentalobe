@@ -68,11 +68,11 @@ export default function BlogList({ blog }) {
                 }
 
                 .blogHeadingDate {
-                    font-size: 15px;
+                    font-size: 12.5px;
                 }
 
                 .blogHeadingTitle {
-                    font-size: 25px;
+                    font-size: 20px;
                     line-height: 1.2;
                 }
 
