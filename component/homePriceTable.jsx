@@ -33,8 +33,6 @@ export default function HomePriceTable() {
                     border: 1px solid black;
                     border-radius: 5px;
                     text-align: center;
-                    font-family: "HiraginoSans-W0";
-                    font-weight: 100;
                     font-size: 20px;
                     color: var(--linkBlue);
                 }

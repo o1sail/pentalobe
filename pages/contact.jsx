@@ -287,34 +287,6 @@ export default function Contact() {
                             </div>
                         </li>
 
-                        {/* イヤホンジャックケーブル
-                        <li className="conatctUnitLi">
-                            <div className="cableImgC">
-                                <Image
-                                    src="/cable/earphone_1x.png"
-                                    width={782}
-                                    height={127}
-                                    objectFit="contain"
-                                    quality={50}
-                                    unoptimized={true}
-                                    alt=""
-                                />
-                            </div>
-                            <div className="cableLongImgC">
-                                <Image
-                                    src="/cable/earphone_4x.png"
-                                    width={3582}
-                                    height={152}
-                                    objectFit="contain"
-                                    quality={50}
-                                    unoptimized={true}
-                                    alt=""
-                                />
-                            </div>
-                            <h4>Line</h4>
-                            <p>コメント</p>
-                        </li>
-                        */}
                     </ul>
                 </div>
 
@@ -351,8 +323,9 @@ export default function Contact() {
                     width: 100%;
                     display: flex;
                     margin-bottom: 2.5vh;
+                    padding: 0;
                     text-align: center;
-                    font-family: "HiraginoSans-W0";
+                    font-family: sans-serif;
                     font-size: 15px;
                     border: none;
                     border-bottom: 1px solid black;
@@ -373,6 +346,7 @@ export default function Contact() {
                     margin: 0 auto 2.5vh auto;
                     border-bottom: none;
                     color: var(--linkBlue);
+                    background-color: white;
                 }
                 .submitButton:focus {
                     border-bottom: none;

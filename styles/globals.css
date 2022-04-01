@@ -41,6 +41,13 @@ a {
     word-wrap: break-word /* dangerouslySetInnerHTML用 */
 }
 
+select,
+th,
+td {
+    font-family: -apple-system;
+    font-weight: 100;
+}
+
 a {
     text-decoration: none;
 }
