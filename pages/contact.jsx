@@ -328,7 +328,11 @@ export default function Contact() {
                     font-family: sans-serif;
                     font-size: 15px;
                     outline: none;
-                    border: none;
+                    border-top: none;
+                    border-right: none;
+                    border-bottom: 1px solid black;
+                    border-left: none;
+                    border-radius: 0;
                 }
 
                 /*
@@ -338,10 +342,10 @@ export default function Contact() {
                 border-radius: 5px;
                 */
 
-                /* input:focus, textarea:focus {
+                input:focus, textarea:focus {
                     outline: none;
                     border-bottom: 1px solid var(--linkBlue);
-                } */
+                }
 
                 .lineqrImgC {
                     width: 50vw;
@@ -360,6 +364,7 @@ export default function Contact() {
                     border-bottom: none;
                 }
                 */
+
                 //幅が960px以上かつ横画面 (タブレット横、pc)
                 @media screen and (min-width: 960px) and (orientation: landscape) {
                     .cableImgC {
