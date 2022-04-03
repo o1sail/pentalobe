@@ -35,6 +35,7 @@ export default function HomePriceTable() {
                     text-align: center;
                     font-size: 20px;
                     color: var(--linkBlue);
+                    background: transparent;
                 }
 
                 .homePriceTableC {

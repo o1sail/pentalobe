@@ -36,7 +36,7 @@ export default function Contact() {
                                     width={781}
                                     height={90}
                                     objectFit="contain"
-                                    quality={50}
+                                    quality={20}
                                     unoptimized={true}
                                     alt=""
                                 />
@@ -65,7 +65,7 @@ export default function Contact() {
                                     width={781}
                                     height={109}
                                     objectFit="contain"
-                                    quality={50}
+                                    quality={20}
                                     unoptimized={true}
                                     alt=""
                                 />
@@ -109,7 +109,7 @@ export default function Contact() {
                                     width={781}
                                     height={127}
                                     objectFit="contain"
-                                    quality={50}
+                                    quality={20}
                                     unoptimized={true}
                                     alt=""
                                 />
@@ -138,7 +138,7 @@ export default function Contact() {
                                     width={781}
                                     height={181}
                                     objectFit="contain"
-                                    quality={50}
+                                    quality={20}
                                     unoptimized={true}
                                     alt=""
                                 />
@@ -167,7 +167,7 @@ export default function Contact() {
                                     width={782}
                                     height={127}
                                     objectFit="contain"
-                                    quality={50}
+                                    quality={20}
                                     unoptimized={true}
                                     alt=""
                                 />
@@ -196,7 +196,7 @@ export default function Contact() {
                                     width={781}
                                     height={109}
                                     objectFit="contain"
-                                    quality={50}
+                                    quality={20}
                                     unoptimized={true}
                                     alt=""
                                 />
@@ -225,7 +225,7 @@ export default function Contact() {
                                     width={781}
                                     height={271}
                                     objectFit="contain"
-                                    quality={50}
+                                    quality={20}
                                     unoptimized={true}
                                     alt=""
                                 />
@@ -269,7 +269,7 @@ export default function Contact() {
                                     width={781}
                                     height={271}
                                     objectFit="contain"
-                                    quality={50}
+                                    quality={20}
                                     unoptimized={true}
                                     alt=""
                                 />

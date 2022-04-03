@@ -37,7 +37,7 @@ export default function Home(props) {
                             width={1340}
                             height={166}
                             objectFit="contain"
-                            quality={50}
+                            quality={20}
                             unoptimized={true}
                             alt=""
                         />
@@ -57,7 +57,7 @@ export default function Home(props) {
                             width={1050}
                             height={51}
                             objectFit="contain"
-                            quality={50}
+                            quality={20}
                             unoptimized={true}
                             alt=""
                         />
@@ -83,7 +83,7 @@ export default function Home(props) {
                             width={558}
                             height={60}
                             objectFit="contain"
-                            quality={50}
+                            quality={20}
                             unoptimized={true}
                             alt=""
                         />
@@ -108,7 +108,7 @@ export default function Home(props) {
                             width={656}
                             height={77}
                             objectFit="contain"
-                            quality={50}
+                            quality={20}
                             unoptimized={true}
                             alt=""
                         />
@@ -137,7 +137,7 @@ export default function Home(props) {
                             width={838}
                             height={142}
                             objectFit="contain"
-                            quality={50}
+                            quality={20}
                             unoptimized={true}
                             alt=""
                         />
@@ -153,7 +153,7 @@ export default function Home(props) {
                             width={679}
                             height={383}
                             objectFit="contain"
-                            quality={50}
+                            quality={20}
                             unoptimized={true}
                             alt=""
                         />
