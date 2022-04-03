@@ -330,7 +330,7 @@ export default function Contact() {
                     outline: none;
                     border-top: none;
                     border-right: none;
-                    border-bottom: 1px solid black;
+                    border-bottom: 1px solid lightgrey;
                     border-left: none;
                     border-radius: 0;
                 }

@@ -68,13 +68,13 @@ export default function PriceTables() {
                 }
 
                 select {
-                    width: 95vw;
+                    width: 100%;
                     height: 100%;
                     margin: 0 auto;
 
                     position: absolute;
                     top: 0;
-                    right: 0;
+                    //right: 0;
                     left: 0;
                     bottom: 0;
                     z-index: 10;
@@ -86,7 +86,8 @@ export default function PriceTables() {
                     font-size: 20px;
                     appearance: none;
                     color: white;
-                    background: transparent;
+                    //background: transparent;
+                    background-color: burlywood;
                 }
 
                 ul {
