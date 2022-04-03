@@ -327,15 +327,21 @@ export default function Contact() {
                     text-align: center;
                     font-family: sans-serif;
                     font-size: 15px;
+                    outline: none;
                     border: none;
-                    border-bottom: 1px solid black;
-                    border-image-width: 0;
                 }
 
-                input:focus, textarea:focus {
+                /*
+                border: none;
+                border-bottom: 1px solid black; //スマホはborder、pcはborder-bottom
+                outline: 1px solid black;
+                border-radius: 5px;
+                */
+
+                /* input:focus, textarea:focus {
                     outline: none;
                     border-bottom: 1px solid var(--linkBlue);
-                }
+                } */
 
                 .lineqrImgC {
                     width: 50vw;
@@ -349,9 +355,11 @@ export default function Contact() {
                     color: var(--linkBlue);
                     background-color: white;
                 }
+                /*
                 .submitButton:focus {
                     border-bottom: none;
                 }
+                */
                 //幅が960px以上かつ横画面 (タブレット横、pc)
                 @media screen and (min-width: 960px) and (orientation: landscape) {
                     .cableImgC {

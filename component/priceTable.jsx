@@ -55,7 +55,6 @@ export default function PriceTable({ pd }) {
                 }
                 .modelName {
                     text-align: center;
-                    //font-family: BlinkMacSystemFont;
                     font-weight: bold;
                     font-size: 20px;
                 }
