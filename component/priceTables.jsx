@@ -60,6 +60,7 @@ export default function PriceTables() {
                     width: 95vw;
                     height: fit-content;
                     margin: 0 auto;
+
                     position: fixed;
                     bottom: 1vh;
                     z-index: 5;
@@ -67,16 +68,20 @@ export default function PriceTables() {
                 }
 
                 select {
-                    width: 100%;
+                    width: 95vw;
                     height: 100%;
                     margin: 0 auto;
+
                     position: absolute;
                     top: 0;
+                    right: 0;
                     left: 0;
+                    bottom: 0;
                     z-index: 10;
+
+                    text-align: center;
                     outline: none;
                     border: none;
-                    text-align: center;
                     font-weight: bold;
                     font-size: 20px;
                     appearance: none;
