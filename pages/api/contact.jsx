@@ -44,7 +44,7 @@ export default function sendmail(req, res) {
     // 管理人に送るお問い合わせメッセージ通知メール
     const toHostMailData = {
         from: "pentalobe.repair@gmail.com",
-        to: "pentalobe.repair@gmail.com",
+        to: "about.o1sail@gmail.com",
         subject: `【お問い合わせ】${req.body.name}様より`,
         text: req.body.message + " | Sent from: " + req.body.email,
         html: `
