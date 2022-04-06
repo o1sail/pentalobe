@@ -5,29 +5,84 @@ import NavigationMenu from "../component/navigationMenu";
 import Logo from "../component/logo";
 
 export default function Contact() {
-
     const [isNavOpened, setIsNavOpend] = useState(false);
     const menuFunction = () => {
         setIsNavOpend(!isNavOpened);
     };
 
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [model, setModel] = useState("");
+    const [message, setMessage] = useState("");
+    const [date, setDate] = useState("");
+    const [place, setPlace] = useState("");
+    const [otherMessage, setOtherMessage] = useState("");
+    const [submitted, setSubmitted] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("送信中");
+
+        let data = {
+            name,
+            email,
+            model,
+            message,
+            date,
+            place,
+            otherMessage,
+        };
+
+        fetch("/api/contact", {
+            method: "POST",
+            headers: {
+                Accept: "application/json, text/plain, */*",
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        }).then((res) => {
+            if (res.status === 200) {
+                console.log("送信が成功しました");
+                setSubmitted(true);
+                setName("");
+                setEmail("");
+                setModel("");
+                setMessage("");
+                setDate("");
+                setPlace("");
+                setOtherMessage("");
+            }
+        });
+    };
+
     return (
         <>
-            <div className={`baseC ${isNavOpened ? "navIsOpened" : "navIsClosed"}`}>
-
-                <div className={`navMenuC ${isNavOpened ? "showNav" : "hideNav"}`} onClick={() => menuFunction()}>
-                    <NavigationMenu onContact="onContact"/>
+            <div
+                className={`baseC ${
+                    isNavOpened ? "navIsOpened" : "navIsClosed"
+                }`}
+            >
+                <div
+                    className={`navMenuC ${
+                        isNavOpened ? "showNav" : "hideNav"
+                    }`}
+                    onClick={() => menuFunction()}
+                >
+                    <NavigationMenu onContact="onContact" />
                 </div>
 
-                <div className={`contentC ${isNavOpened ? "hideContent" : "showContent"}`}>
+                <div
+                    className={`contentC ${
+                        isNavOpened ? "hideContent" : "showContent"
+                    }`}
+                >
                     <div className="logoC">
-                        <Logo/>
+                        <Logo />
                     </div>
 
                     <h3>お問い合わせ</h3>
 
                     <ul className="contactUl">
-
                         {/* tell */}
                         <li className="contactLi">
                             <div className="cableImgC">
@@ -53,7 +108,9 @@ export default function Contact() {
                                 />
                             </div>
                             <h4>Tell</h4>
-                            <p className="contactLinkP"><a href="tel:080-1234-5678">080-1234-5678</a></p>
+                            <p className="contactLinkP">
+                                <a href="tel:080-1234-5678">080-1234-5678</a>
+                            </p>
                             <p>24時間、受け付けております。</p>
                         </li>
 
@@ -93,10 +150,14 @@ export default function Contact() {
                                     alt=""
                                 />
                             </div> */}
-                            <p className="contactLinkP"><a href="">友達に追加</a></p>
+                            <p className="contactLinkP">
+                                <a href="">友達に追加</a>
+                            </p>
                             <p>
-                                LINE電話でのご相談も受け付けております。<br />
-                                当アカウントの方から宣伝や勧誘のメッセージを送信することはございません<br />
+                                LINE電話でのご相談も受け付けております。
+                                <br />
+                                当アカウントの方から宣伝や勧誘のメッセージを送信することはございません
+                                <br />
                                 当アカウントへの勧誘や宣伝、その他の迷惑メッセージを送信された場合はブロックさせていただきます。
                             </p>
                         </li>
@@ -126,8 +187,14 @@ export default function Contact() {
                                 />
                             </div>
                             <h4>Mail</h4>
-                            <p className="contactLinkP"><a href="mailto:pentalobe.repair@gmail.com">pentalobe.repair@gmail.com</a></p>
-                            <p>フィルタリングをかけている場合はpentalobe.repair@gmail.comからのメールを受信できるようお願いいたします。</p>
+                            <p className="contactLinkP">
+                                <a href="mailto:pentalobe.repair@gmail.com">
+                                    pentalobe.repair@gmail.com
+                                </a>
+                            </p>
+                            <p>
+                                フィルタリングをかけている場合はpentalobe.repair@gmail.comからのメールを受信できるようお願いいたします。
+                            </p>
                         </li>
 
                         {/* insta */}
@@ -155,7 +222,9 @@ export default function Contact() {
                                 />
                             </div>
                             <h4>Instagram</h4>
-                            <p className="contactLinkP"><a href="">@xxxxxxxxxx</a></p>
+                            <p className="contactLinkP">
+                                <a href="">@xxxxxxxxxx</a>
+                            </p>
                             <p>準備中</p>
                         </li>
 
@@ -184,7 +253,9 @@ export default function Contact() {
                                 />
                             </div>
                             <h4>Twitter</h4>
-                            <p className="contactLinkP"><a href="">@xxxxxxxxxx</a></p>
+                            <p className="contactLinkP">
+                                <a href="">@xxxxxxxxxx</a>
+                            </p>
                             <p>準備中</p>
                         </li>
 
@@ -213,7 +284,9 @@ export default function Contact() {
                                 />
                             </div>
                             <h4>Facebook</h4>
-                            <p className="contactLinkP"><a href="">@xxxxxxxxxx</a></p>
+                            <p className="contactLinkP">
+                                <a href="">@xxxxxxxxxx</a>
+                            </p>
                             <p>準備中</p>
                         </li>
 
@@ -245,20 +318,83 @@ export default function Contact() {
 
                             <form action="">
                                 <label>お名前(必須)</label>
-                                <input type="text" placeholder="ペン太郎" />
+                                <input
+                                    type="text"
+                                    name="name"
+                                    placeholder="ペン太郎"
+                                    onChange={(e) => {
+                                        setName(e.target.value);
+                                    }}
+                                />
+
                                 <label>メールアドレス(必須)</label>
-                                <input type="text" placeholder="pentalobetokyo@gmail.com" />
+                                <input
+                                    type="text"
+                                    name="email"
+                                    placeholder="pentalobetokyo@gmail.com"
+                                    onChange={(e) => {
+                                        setEmail(e.target.value);
+                                    }}
+                                />
+
                                 <label>修理モデルと色(必須)</label>
-                                <input type="text" placeholder="iPhone13mini グリーン" />
+                                <input
+                                    type="text"
+                                    name="model"
+                                    placeholder="iPhone13mini グリーン"
+                                    onChange={(e) => {
+                                        setModel(e.target.value);
+                                    }}
+                                />
+
                                 <label>修理内容もしくは不具合内容(必須)</label>
-                                <textarea rows="3" placeholder="画面に縦線が入り、タッチが効かない"></textarea>
+                                <textarea
+                                    rows="3"
+                                    name="message"
+                                    placeholder="画面に縦線が入り、タッチが効かない"
+                                    onChange={(e) => {
+                                        setMessage(e.target.value);
+                                    }}
+                                ></textarea>
+
                                 <label>希望日時</label>
-                                <input type="text" placeholder="今日一番早い時間" />
+                                <input
+                                    type="text"
+                                    name="date"
+                                    placeholder="今日一番早い時間"
+                                    onChange={(e) => {
+                                        setDate(e.target.value);
+                                    }}
+                                />
+
                                 <label>希望修理場所</label>
-                                <input type="text" placeholder="東京都渋谷区りんご町" />
+                                <input
+                                    type="text"
+                                    name="place"
+                                    placeholder="東京都渋谷区りんご町"
+                                    onChange={(e) => {
+                                        setPlace(e.target.value);
+                                    }}
+                                />
+
                                 <label>その他</label>
-                                <textarea rows="3" placeholder="お見積もりよろしくお願いします。"></textarea>
-                                <input className="submitButton" type="submit" value="送信"></input>
+                                <textarea
+                                    rows="3"
+                                    name="otherMessage"
+                                    placeholder="お見積もりよろしくお願いします。"
+                                    onChange={(e) => {
+                                        setOtherMessage(e.target.value);
+                                    }}
+                                ></textarea>
+
+                                <input
+                                    className="submitButton"
+                                    type="submit"
+                                    value="送信"
+                                    onClick={(e) => {
+                                        handleSubmit(e);
+                                    }}
+                                ></input>
                             </form>
                         </li>
 
@@ -286,14 +422,17 @@ export default function Contact() {
                                 />
                             </div>
                         </li>
-
                     </ul>
                 </div>
 
-                <div className={`navButtonC ${isNavOpened ? "openNavButton" : "closeNavButton"}`} onClick={() => menuFunction()}>
-                    <NavigationButton isNavOpened={isNavOpened}/>
+                <div
+                    className={`navButtonC ${
+                        isNavOpened ? "openNavButton" : "closeNavButton"
+                    }`}
+                    onClick={() => menuFunction()}
+                >
+                    <NavigationButton isNavOpened={isNavOpened} />
                 </div>
-
             </div>
 
             <style jsx>{`
@@ -305,7 +444,8 @@ export default function Contact() {
                     display: none;
                 }
 
-                h4, p {
+                h4,
+                p {
                     text-align: center;
                 }
                 a {
@@ -319,7 +459,8 @@ export default function Contact() {
                     display: flex;
                     justify-content: center;
                 }
-                input, textarea {
+                input,
+                textarea {
                     width: 100%;
                     display: flex;
                     margin-bottom: 2.5vh;
@@ -335,14 +476,8 @@ export default function Contact() {
                     border-radius: 0;
                 }
 
-                /*
-                border: none;
-                border-bottom: 1px solid black; //スマホはborder、pcはborder-bottom
-                outline: 1px solid black;
-                border-radius: 5px;
-                */
-
-                input:focus, textarea:focus {
+                input:focus,
+                textarea:focus {
                     outline: none;
                     border-bottom: 1px solid var(--linkBlue);
                 }
@@ -359,11 +494,6 @@ export default function Contact() {
                     color: var(--linkBlue);
                     background-color: white;
                 }
-                /*
-                .submitButton:focus {
-                    border-bottom: none;
-                }
-                */
 
                 //幅が960px以上かつ横画面 (タブレット横、pc)
                 @media screen and (min-width: 960px) and (orientation: landscape) {
