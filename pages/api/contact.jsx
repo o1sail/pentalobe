@@ -51,19 +51,19 @@ export default async (req, res) => {
             <p>-----------------------------------------</p>
             <p>お問い合わせ内容</p>
             <p>【お名前】</p>
-            <p>${req.body.name}</p>
+            <p>${name}</p>
             <p>【メールアドレス】</p>
-            <p>${req.body.email}</p>
+            <p>${email}</p>
             <p>【修理モデルと色】</p>
-            <p>${req.body.model}</p>
+            <p>${model}</p>
             <p>【修理内容もしくは不具合内容】</p>
-            <p>${htmlMessage}</p>
+            <p>${message}</p>
             <p>【希望日時】</p>
-            <p>${req.body.date}</p>
+            <p>${date}</p>
             <p>【希望修理場所】</p>
-            <p>${req.body.place}</p>
+            <p>${place}</p>
             <p>【その他】</p>
-            <p>${htmlOtherMessage}</p>
+            <p>${otherMessage}</p>
             <p>-----------------------------------------</p>
             `,
         });
