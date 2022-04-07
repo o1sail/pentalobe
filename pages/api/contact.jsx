@@ -7,16 +7,17 @@ export default async (req, res) => {
         port: 465,
         secure: true,
         auth: {
-            user: "pentalobe.repair@gmail.com", //process.env.SMTP_USER,
-            pass: "kyxubgndoydesudo", //process.env.SMTP_PASSWORD,
+            user: process.env.SMTP_USER,
+            pass: process.env.SMTP_PASSWORD,
         },
     });
 
     try {
         await transporter.sendMail({
+            // 管理人に送るお問い合わせメッセージ通知メール
             from: email,
-            to: "pentalobe.repair@gmail.com",//
-            subject: `Contact form submission from ${name}`,
+            to: "pentalobe.repair@gmail.com",
+            subject: `【お問い合わせ】${name}様より`,
             html: `
             <p>お問い合わせ内容</p>
             <p>【お名前】</p>
