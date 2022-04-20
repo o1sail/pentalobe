@@ -76,6 +76,7 @@ export default function BlogPageId(props) {
 
                 .blogInductionP {
                     text-align: center;
+                    font-size: 20px;
                 }
             `}</style>
         </>
