@@ -269,7 +269,8 @@ export default function NavigationMenu({
                     right: 0;
                     bottom: 0;
                     left: 0;
-                    z-index: 10;
+                    //z-index: 10;
+                    z-index: 1;
                 }
                 .navBackgroundImgL {
                     display: none;
@@ -285,7 +286,8 @@ export default function NavigationMenu({
                     right: 7vw;
                     bottom: 16vh;
                     left: 36vw;
-                    z-index: 20;
+                    //z-index: 20;
+                    z-index: 2;
                 }
 
                 .navTocLi {
@@ -315,7 +317,8 @@ export default function NavigationMenu({
                     position: absolute;
                     bottom: 16vh;
                     left: 37vw;
-                    z-index: 20;
+                    //z-index: 20;
+                    z-index: 2;
                     font-size: 15px;
                 }
 
@@ -333,7 +336,8 @@ export default function NavigationMenu({
                         right: 0;
                         bottom: 0;
                         left: 0;
-                        z-index: 10;
+                        //z-index: 10;
+                        z-index: 1;
                     }
                     .navTocC {
                         top: 7vh;
