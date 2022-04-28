@@ -13,13 +13,13 @@ export default function SwiperMo() {
                 <Swiper
                     modules={[Pagination, A11y, Autoplay, Mousewheel]}
                     slidesPerView={1}
-                    //autoplay={{delay: 3000, disableOnInteraction: false,}}
+                    autoplay={{delay: 3000, disableOnInteraction: false,}}
                     loop={true}
                     speed={1000}
                     pagination={{ clickable: true }}
                     //pagination={{el: ".swiper-pagination"},{ clickable: true }}
                     mousewheel={true}
-                    style={{ width: "95vw", height: "95vw" }}
+                    style={{ width: "100%", height: "100%" }}
                 >
                     <SwiperSlide
                         style={{ width: "100%", height: "100%" }}
@@ -63,39 +63,25 @@ export default function SwiperMo() {
 
             <style jsx>{`
                 .swiperC {
-                    //background-color: lightblue;
+                    width: 95vw;
+                    height: 95vw;
                 }
                 .swiperSlideInnerC {
                     width: 100%;
                     height: 100%;
                 }
+
+                @media screen and (min-width: 960px) and (orientation: landscape) {
+                    .swiperC {
+                        width: 100%;
+                        height: 50vh;
+                    }
+                    .swiperSlideInnerC {
+                        width: 70vw;
+                        height: 50vh;
+                    }
+                }
             `}</style>
         </>
     );
-}
-
-{
-    /* 
-                    <SwiperSlide>Slide 1</SwiperSlide>
-                    <SwiperSlide>Slide 2</SwiperSlide>
-                    <SwiperSlide>Slide 3</SwiperSlide>
-                    <SwiperSlide>Slide 4</SwiperSlide>
-                    */
-}
-
-{
-    /*
-                        <div>
-                            <Image
-                                src="/iphoneFrame/iPhone_13_mini_frame.png"
-                                width={2381}
-                                height={4802}
-                                layout="responsive"
-                                objectFit="contain"
-                                quality={20}
-                                unoptimized={true}
-                                alt=""
-                            />
-                        </div>
-                        */
 }

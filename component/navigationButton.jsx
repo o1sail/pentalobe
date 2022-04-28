@@ -2,8 +2,6 @@ import Image from "next/image";
 
 export default function NavigationButton({ isNavOpened }) {
 
-    console.log(isNavOpened)
-
     return (
         <div className="navButtonInnerC">
             <div className={`screwC ${ isNavOpened ? "navOpenScrew" : "navCloseScrew" } ${ isNavOpened ? "hidePentalobeScrew" : "showPentalobeScrew" }`}>
