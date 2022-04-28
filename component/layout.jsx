@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+//import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import NavigationMenu from "../component/navigationMenu";
 import NavigationButton from "../component/navigationButton";
@@ -6,104 +7,9 @@ import Logo from "./logo";
 
 export default function Layout({ children }) {
     const [isNavOpened, setIsNavOpend] = useState(false);
-    console.log(isNavOpened)
     const menuFunction = () => {
         setIsNavOpend(!isNavOpened);
-        console.log(isNavOpened)
     };
-
-    function handle(e) {
-        e.preventDefault();
-        console.log("ggg")
-        console.log(isNavOpened)
-    }
-
-    // function no_scroll() {
-    //     document.addEventListener("wheel", handle, { passive: false });
-    //     document.addEventListener("touchmove", handle, { passive: false });
-    // }
-
-    // function return_scroll() {
-    //     document.removeEventListener("wheel", handle, { passive: true });
-    //     document.removeEventListener("touchmove", handle, { passive: true });
-    // }
-
-    useEffect(() => {
-
-        console.log(isNavOpened)
-        console.log("useEffect")
-
-        // if (isNavOpened === true) {
-        //     document.addEventListener("wheel", handle, true);
-        //     document.addEventListener("touchmove", handle, true);
-        //     console.log("cant")
-        //     console.log(isNavOpened)
-        // }
-        // if (isNavOpened === false) {
-        //     document.removeEventListener("wheel", handle, true);
-        //     document.removeEventListener("touchmove", handle, true);
-        //     console.log("can")
-        //     console.log(isNavOpened)
-        // }
-
-        if (isNavOpened === true) {
-            document.addEventListener("wheel", handle, { passive: false });
-            document.addEventListener("touchmove", handle, { passive: false });
-            console.log("cant")
-            console.log(isNavOpened)
-        }
-        if (isNavOpened === false) {
-            document.removeEventListener("wheel", handle, { passive: false });
-            document.removeEventListener("touchmove", handle, { passive: false });
-            console.log("can")
-            console.log(isNavOpened)
-        }
-        console.log(isNavOpened)
-    }, [isNavOpened])
-
-
-    // useEffect(() => {
-    //     isNavOpenedRef.current = isNavOpened //
-    //     if (isNavOpenedRef.current === false) {
-    //         document.removeEventListener("wheel", handle, { passive: false });
-    //         document.removeEventListener("touchmove", handle, { passive: false });
-    //         console.log("can")
-    //         console.log(isNavOpenedRef)
-    //     }
-    //     if (isNavOpenedRef.current === true) {
-    //         document.addEventListener("wheel", handle, { passive: false });
-    //         document.addEventListener("touchmove", handle, { passive: false });
-    //         console.log("cant")
-    //         console.log(isNavOpenedRef)
-    //     }
-    // },[isNavOpened])
-
-    // useEffect(() => {
-    //     function handle(event) {
-    //     event.preventDefault();
-    //     console.log("ggg")
-    //     console.log(isNavOpened)
-    //     }
-        
-
-    //     console.log(isNavOpened)
-    //     console.log("useEffect")
-    //     if (isNavOpened === true) {
-    //         document.addEventListener("wheel", handle, { passive: false });
-    //         document.addEventListener("touchmove", handle, { passive: false });
-    //         console.log("cant")
-    //         console.log(isNavOpened)
-    //     }
-    //     if (isNavOpened === false) {
-    //         document.removeEventListener("wheel", handle, { passive: false });
-    //         document.removeEventListener("touchmove", handle, { passive: false });
-    //         console.log("can")
-    //         console.log(isNavOpened)
-    //     }
-    //     console.log(isNavOpened)
-    // }, [isNavOpened])
-
-
 
     return (
         <>
@@ -119,7 +25,7 @@ export default function Layout({ children }) {
                     }`}
                     onClick={() => menuFunction()}
                 >
-                    <NavigationMenu onHome="onHome" />
+                    <NavigationMenu />
                 </div>
 
                 {/* コンテンツ */}
@@ -253,3 +159,87 @@ export default function Layout({ children }) {
         </>
     );
 }
+
+
+
+//--------------------------------------------
+    // function handle(e) {
+    //     e.preventDefault();
+    //     console.log("ggg")
+    //     console.log(isNavOpened)
+    // }
+
+    // useEffect(() => {
+
+    //     console.log(isNavOpened)
+    //     console.log("useEffect")
+
+    //     if (isNavOpened === true) {
+    //         document.addEventListener("wheel", handle, { passive: false });
+    //         document.addEventListener("touchmove", handle, { passive: false });
+    //         console.log("cant")
+    //         console.log(isNavOpened)
+    //     }
+    //     if (isNavOpened === false) {
+    //         document.removeEventListener("wheel", handle, { passive: false });
+    //         document.removeEventListener("touchmove", handle, { passive: false });
+    //         console.log("can")
+    //         console.log(isNavOpened)
+    //     }
+    //     console.log(isNavOpened)
+    // }, [isNavOpened])
+//--------------------------------------------
+
+
+
+    // useEffect(() => {
+    //     isNavOpenedRef.current = isNavOpened //
+    //     if (isNavOpenedRef.current === false) {
+    //         document.removeEventListener("wheel", handle, { passive: false });
+    //         document.removeEventListener("touchmove", handle, { passive: false });
+    //         console.log("can")
+    //         console.log(isNavOpenedRef)
+    //     }
+    //     if (isNavOpenedRef.current === true) {
+    //         document.addEventListener("wheel", handle, { passive: false });
+    //         document.addEventListener("touchmove", handle, { passive: false });
+    //         console.log("cant")
+    //         console.log(isNavOpenedRef)
+    //     }
+    // },[isNavOpened])
+
+    // useEffect(() => {
+    //     function handle(event) {
+    //     event.preventDefault();
+    //     console.log("ggg")
+    //     console.log(isNavOpened)
+    //     }
+        
+
+    //     console.log(isNavOpened)
+    //     console.log("useEffect")
+    //     if (isNavOpened === true) {
+    //         document.addEventListener("wheel", handle, { passive: false });
+    //         document.addEventListener("touchmove", handle, { passive: false });
+    //         console.log("cant")
+    //         console.log(isNavOpened)
+    //     }
+    //     if (isNavOpened === false) {
+    //         document.removeEventListener("wheel", handle, { passive: false });
+    //         document.removeEventListener("touchmove", handle, { passive: false });
+    //         console.log("can")
+    //         console.log(isNavOpened)
+    //     }
+    //     console.log(isNavOpened)
+    // }, [isNavOpened])
+
+
+    // function no_scroll() {
+    //     document.addEventListener("wheel", handle, { passive: false });
+    //     document.addEventListener("touchmove", handle, { passive: false });
+    // }
+
+    // function return_scroll() {
+    //     document.removeEventListener("wheel", handle, { passive: true });
+    //     document.removeEventListener("touchmove", handle, { passive: true });
+    // }
