@@ -41,7 +41,8 @@ export default function BlogList({ blog }) {
                 ul {
                     width: 100%;
                     height: fit-content;
-                    margin-bottom: calc(2.5vh - 2.5vw);
+                    //margin-bottom: calc(2.5vh - 2.5vw);
+                    margin-bottom: 2.5vh;
                 }
 
                 a {
@@ -85,6 +86,12 @@ export default function BlogList({ blog }) {
 
                 .blogPreviewText {
                     display: none;
+                }
+
+                @media screen and (min-width: 520px) and (orientation: portrait) {
+                    .blogHeadingText {
+                        width: calc(100vw - 20vw - 30vw);
+                    }
                 }
 
                 /* 幅が960px以上かつ横画面 (タブレット横、pc) */

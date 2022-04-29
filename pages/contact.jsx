@@ -471,14 +471,24 @@ ${data.name}様、お問い合わせありがとうございます。
                     background-color: white;
                 }
 
-                //幅が960px以上かつ横画面 (タブレット横、pc)
+                @media screen and (min-width: 520px) and (orientation: portrait) {
+                    .cableImgC {
+                        display: none;
+                    }
+                    .cableLongImgC {
+                        display: block;
+                        width: 90vw;
+                        margin-right: -10vw;
+                    }
+                }
+
                 @media screen and (min-width: 960px) and (orientation: landscape) {
                     .cableImgC {
                         display: none;
                     }
                     .cableLongImgC {
-                        width: 80vw;
                         display: block;
+                        width: 80vw;
                     }
 
                     .lineqrImgC {

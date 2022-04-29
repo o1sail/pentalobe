@@ -24,7 +24,7 @@ export default function Home(props) {
             </div>
 
             <div className="homeArticleC introductionC">
-                <h4>hello 故障したApple製品。</h4>
+                <h3>hello 故障したApple製品。</h3>
                 <p>
                     出張/郵送
                     スマホ修理ペンタローブです。現在は都内を中心に出張修理を行っております。
@@ -141,18 +141,12 @@ export default function Home(props) {
 
             <style jsx>{`
                 .homeArticleC {
-                    //一時的
                     margin: 0 auto;
                     display: flex;
                     flex-direction: column;
                 }
 
-                h4 {
-                    font-size: 20px;
-                }
-
-                p,
-                h4 {
+                p {
                     text-align: center;
                 }
 
@@ -168,12 +162,18 @@ export default function Home(props) {
 
                 .toolC {
                     width: 90vw;
-                    margin: 2.5vh auto;
+                    margin: 5vh auto;
+                }
+
+                @media screen and (min-width: 520px) and (orientation: portrait) {
+                    .toolC {
+                        width: 70vw;
+                    }
                 }
 
                 @media screen and (min-width: 960px) and (orientation: landscape) {
                     .toolC {
-                        width: 30vw;
+                        width: 40vw;
                     }
 
                     .homePC {

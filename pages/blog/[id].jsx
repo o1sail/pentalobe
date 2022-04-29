@@ -22,11 +22,11 @@ export default function BlogPageId(props) {
                         alt="ペンタローブログ"
                     />
                 </h3>
-                <h4 className="blogIntroP">
+                <p className="blogIntroP">
                     修復不可能なときは Oh wow... と3回唱えます。
                     <br />
                     スティーブ・ジョークです。
-                </h4>
+                </p>
             </div>
 
             <BlogList blog={props.blog} />
@@ -40,10 +40,11 @@ export default function BlogPageId(props) {
             <style jsx>{`
                 .blogIntroC {
                     text-align: center;
+                    margin-bottom: 5vh;
                 }
 
-                .blogIntroP {
-                    font-size: 15px;
+                h3 {
+                    margin-bottom: 0;
                 }
 
                 .blogInductionP {

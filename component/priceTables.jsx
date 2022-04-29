@@ -94,8 +94,15 @@ export default function PriceTables() {
                     margin: 0 auto 20vw auto; //20vw:selectの高さ
                 }
                 li {
-                    margin-bottom: 5vh;
+                    margin-bottom: 10vh;
                 }
+
+                @media screen and (min-width: 520px) and (orientation: portrait) {
+                    .selectC {
+                        width: 80vw; //(100-15-5-5)75vw以下
+                    }
+                }
+
                 @media screen and (min-width: 960px) and (orientation: landscape) {
                     .selectC {
                         width: 30vw; //(100-15-5-5)75vw以下

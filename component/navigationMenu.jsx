@@ -19,24 +19,8 @@ export default function NavigationMenu() {
         } else {
             const changedPath = path.replace("/", "on")
             setClassNamePath(changedPath)
-            console.log(changedPath)
         }
-        console.log(classNamePath)
     },)
-
-    // const router = useRouter();
-    // const path = router.pathname
-    // useEffect(() => {
-    //     if (path === "/") {
-    //         setOnNav("onhome")
-    //     } else if (path.indexOf("/blog") === 0) {
-    //         setOnNav("onblog")
-    //     } else {
-    //         const classNamePath = path.replace("/", "on")
-    //         setOnNav(classNamePath)
-    //     }
-    //     console.log(onNav)
-    // },)
 
     return (
         <header>
@@ -53,6 +37,16 @@ export default function NavigationMenu() {
             <div className="navBackgroundImgL">
                 <Image
                     src="/iPhone13mini_internals_landscape.png"
+                    layout="fill"
+                    quality={20}
+                    unoptimized={true}
+                    alt=""
+                />
+            </div>
+
+            <div className="navBackgroundImgTablet">
+                <Image
+                    src="/iPad11Pro_internals.png"
                     layout="fill"
                     quality={20}
                     unoptimized={true}
@@ -298,10 +292,9 @@ export default function NavigationMenu() {
                     right: 0;
                     bottom: 0;
                     left: 0;
-                    //z-index: 10;
                     z-index: 1;
                 }
-                .navBackgroundImgL {
+                .navBackgroundImgL, .navBackgroundImgTablet {
                     display: none;
                 }
 
@@ -315,7 +308,6 @@ export default function NavigationMenu() {
                     right: 7vw;
                     bottom: 16vh;
                     left: 36vw;
-                    //z-index: 20;
                     z-index: 2;
                 }
 
@@ -324,10 +316,6 @@ export default function NavigationMenu() {
                     height: calc(100% / 12); //目次が増えれば変更
                     display: flex;
                     align-items: center;
-                }
-
-                .copyrightP {
-                    color: grey;
                 }
 
                 .navTocH2OnHome,
@@ -352,14 +340,14 @@ export default function NavigationMenu() {
                     position: absolute;
                     bottom: 16vh;
                     left: 37vw;
-                    //z-index: 20;
                     z-index: 2;
                     font-size: 15px;
+                    color: grey;
                 }
 
                 //幅が959px未満かつ横画面 (スマホ横)
                 @media screen and (max-width: 959px) and (orientation: landscape) {
-                    .navBackgroundImg {
+                    .navBackgroundImg, .navBackgroundImgTablet {
                         display: none;
                     }
                     .navBackgroundImgL {
@@ -371,7 +359,6 @@ export default function NavigationMenu() {
                         right: 0;
                         bottom: 0;
                         left: 0;
-                        //z-index: 10;
                         z-index: 1;
                     }
                     .navTocC {
@@ -403,8 +390,51 @@ export default function NavigationMenu() {
                     }
                 }
 
+                //幅が520px以上かつ縦画面 (タブレット縦)
+                @media screen and (min-width: 520px) and (orientation: portrait) {
+                    .navBackgroundImg, .navBackgroundImgL {
+                        display: none;
+                    }
+                    .navBackgroundImgTablet {
+                        width: 100vw;
+                        height: 100vh;
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        z-index: 1;
+                    }
+
+                    .navTocC {
+                        top: 30vh;
+                        right: 58vw;
+                        bottom: 18vh;
+                        left: 9vw;
+                    }
+
+                    .navTocH2OnHome,
+                    .navTocH2OnRepairingProcess,
+                    .navTocH2OnPrice,
+                    .navTocH2OnBlog,
+                    .navTocH2OnContact {
+                        color: black;
+                    }
+
+                    .copyrightP {
+                        bottom: 17vh;
+                        left: 10vw;
+                        color: black;
+                    }
+                }
+
                 //幅が960px以上かつ横画面 (タブレット横、pc)
                 @media screen and (min-width: 960px) and (orientation: landscape) {
+                    header {
+                        max-width: 360px;
+                    }
+
                     .navBackgroundImg, .navBackgroundImgL {
                         display: none;
                     }

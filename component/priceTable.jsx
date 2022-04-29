@@ -103,9 +103,7 @@ export default function PriceTable({ pd }) {
                     font-size: 15px;
                 }
 
-                //幅が960px以上かつ横画面 (タブレット横、pc)
-                @media screen and (min-width: 960px) and (orientation: landscape) {
-
+                @media screen and (min-width: 520px) and (orientation: portrait) {
                     .priceTableFrameC {
                         position: relative;
                     }
@@ -126,15 +124,19 @@ export default function PriceTable({ pd }) {
                     tr, th, td {
                         width: 100%;
                     }
-                    /*
+                }
+
+                @media screen and (min-width: 960px) and (orientation: landscape) {
                     .priceTableFrameC {
-                        width: 60vw; //要調整
-                        height: fit-content;
-                        margin: 0 auto;
                         position: relative;
                     }
-                    
+
+                    .frameImgC {
+                        display: block;
+                    }
+
                     table {
+                        width: 85%;
                         margin: auto;
                         position: absolute;
                         top: 0;
@@ -142,7 +144,9 @@ export default function PriceTable({ pd }) {
                         bottom: 0;
                         left: 0;
                     }
-                    */
+                    tr, th, td {
+                        width: 100%;
+                    }
                 }
             `}</style>
         </>

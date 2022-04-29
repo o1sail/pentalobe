@@ -124,6 +124,9 @@ export default function Layout({ children }) {
 
                 /* 幅が520px以上かつ縦画面 (タブレット縦) */
                 @media screen and (min-width: 520px) and (orientation: portrait) {
+                    .contentC {
+                        padding: calc(3vh + 30px + 3vh) 10vw 0 10vw;
+                    }
                 }
 
                 /* 幅が960px以上かつ横画面 (タブレット横、pc) */

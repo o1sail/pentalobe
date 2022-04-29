@@ -521,6 +521,9 @@ export default function RepairingProcess() {
 
                 //幅が960px以上かつ横画面 (タブレット横、pc)
                 @media screen and (min-width: 960px) and (orientation: landscape) {
+                    .rpC {
+                        padding: 0 5vw;
+                    }
                     .rpNumberImgC {
                         width: 10%;
                     }

@@ -9,6 +9,9 @@ export default function Price() {
             <PriceTables/>
 
             <style jsx>{`
+                h3 {
+                    margin-bottom: 5vh;
+                }
             `}</style>
         </>
     );
