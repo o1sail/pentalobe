@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form";
 import Image from "next/image";
 
+import Seo from "../component/Seo";
+
 export default function Contact() {
 
     const onSubmitForm = async (data) => {
@@ -53,6 +55,11 @@ ${data.name}様、お問い合わせありがとうございます。
 
     return (
         <>
+            <Seo
+                pageTitle={"Contact"}
+                pageDescription={"東京都内を中心とした出張iPhone修理サービス。お問い合わせはこちらから。"}
+            />
+
             <h3>お問い合わせ</h3>
 
             <ul className="contactUl">

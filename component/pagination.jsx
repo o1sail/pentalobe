@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export const Pagination = ( blog ) => {
 
-    const PER_PAGE = 4;
+    const PER_PAGE = 20;
 
     const router = useRouter();
     const currentPageNumber = Number(router.asPath.substring(router.asPath.lastIndexOf('/') + 1))
@@ -20,13 +20,14 @@ export const Pagination = ( blog ) => {
             return "startPage"
         }
     };
+    const range = (start, end) => [...Array(end - start + 1)].map((_, i) => start + i);
     const nextPage = () => {
-        if (currentPageNumber === range.length || range.length === 1) {
+        if (currentPageNumber === range.length || range.length === 1 || currentPageNumber === 1) {
             return "endPage"
         }
     };
 
-    const range = (start, end) => [...Array(end - start + 1)].map((_, i) => start + i);
+    console.log(range.length)
 
     return (
         <>

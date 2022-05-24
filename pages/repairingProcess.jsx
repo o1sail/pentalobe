@@ -1,9 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import Seo from "../component/Seo";
+
 export default function RepairingProcess() {
     return (
         <>
+            <Seo
+                pageTitle={"Repairing Process"}
+                pageDescription={"東京都内を中心とした出張iPhone修理サービス。修理の流れはこちらから。"}
+            />
+
             <h3>修理の流れ</h3>
 
             <ul className="rpC">

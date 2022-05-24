@@ -3,6 +3,7 @@ import { client } from "../../../libs/client";
 import Moment from "react-moment";
 import Link from "next/link";
 import Image from "next/image";
+import Seo from "../../../component/Seo";
 
 export default function BlogId({
     blog,
@@ -26,6 +27,11 @@ export default function BlogId({
 
     return (
         <>
+            <Seo
+                pageTitle={blog.title}
+                pageDescription={blog.previewtext}
+            />
+
             <div className="blogUnitC">
                 <h3 className="blogUnitTitle">{blog.title}</h3>
                 <p className="blogUnitDate">

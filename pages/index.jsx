@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { client } from "../libs/client";
 
+import Seo from "../component/Seo";
 import SwiperMo from "../component/swiper";
 import HomePriceTable from "../component/homePriceTable";
 import BlogList from "../component/blogList";
@@ -11,6 +12,10 @@ export default function Home(props) {
 
     return (
         <>
+            <Seo
+                pageTitle={"Home"}
+            />
+
             <div className="toolC">
                 <Image
                     src="/tool/pentalobe_driver.png"
