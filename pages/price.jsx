@@ -1,4 +1,4 @@
-import Seo from "../component/Seo";
+import Seo from "../component/seo";
 import PriceTables from "../component/priceTables";
 
 export default function Price() {

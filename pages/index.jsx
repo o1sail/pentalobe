@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { client } from "../libs/client";
 
-import Seo from "../component/Seo";
+import Seo from "../component/seo";
 import SwiperMo from "../component/swiper";
 import HomePriceTable from "../component/homePriceTable";
 import BlogList from "../component/blogList";

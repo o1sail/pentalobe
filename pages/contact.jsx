@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import Image from "next/image";
 
-import Seo from "../component/Seo";
+import Seo from "../component/seo";
 
 export default function Contact() {
 

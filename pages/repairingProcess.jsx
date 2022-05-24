@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import Seo from "../component/Seo";
+import Seo from "../component/seo";
 
 export default function RepairingProcess() {
     return (

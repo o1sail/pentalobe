@@ -4,7 +4,7 @@ import BlogList from "../../component/blogList";
 import { Pagination } from "../../component/pagination";
 import { client } from "../../libs/client";
 
-import Seo from "../../component/Seo";
+import Seo from "../../component/seo";
 
 const PER_PAGE = 20; //1ページの表示件数
 

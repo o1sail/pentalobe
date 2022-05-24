@@ -3,7 +3,7 @@ import { client } from "../../../libs/client";
 import Moment from "react-moment";
 import Link from "next/link";
 import Image from "next/image";
-import Seo from "../../../component/Seo";
+import Seo from "../../../component/seo";
 
 export default function BlogId({
     blog,
