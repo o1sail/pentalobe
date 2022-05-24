@@ -2,8 +2,8 @@ import Head from "next/head";
 
 export default function Seo({ pageTitle, pageDescription }) {
 
-    const defaultTitle = "出張/郵送 スマホ修理 ペンタローブ";
-    const defaultDescription = "東京都内を中心とした出張iPhone修理サービス。お客様のご自宅や外出先に赴いて最短30分で修理いたします!";
+    const defaultTitle = "ペンタローブ";
+    const defaultDescription = "東京都内を中心とした出張/郵送iPhone修理サービス。お客様のご自宅や外出先に赴いて最短30分で修理いたします!";
     const title = pageTitle ? `${pageTitle} | ${defaultTitle}` : defaultTitle;
     const description = pageDescription ? pageDescription : defaultDescription;
     const url = "https://pentalobe.vercel.app/";

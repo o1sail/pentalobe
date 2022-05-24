@@ -116,7 +116,8 @@ export default function Home(props) {
                 </div>
             </div>
 
-            <div className="toolC">
+            
+            {/* <div className="toolC">
                 <Image
                     src="/tool/isesamo.png"
                     width={838}
@@ -130,7 +131,7 @@ export default function Home(props) {
 
             <div className="homeArticleC">
                 <h4>実績,ギャラリー</h4>
-            </div>
+            </div> */}
 
             <div className="toolC">
                 <Image
