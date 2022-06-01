@@ -30,7 +30,7 @@ https://pentalobe.vercel.app/
 ・フレームワークとCMSの選定  
 開発当初はGatsby.jsとContentfulを使用していたが、それだとContentfulに投稿したリッチテキストがGatsby.jsでは反映されませんでした
 
-・ブログ投稿　　
+・ブログ投稿  
 プログラミングの知識がない人でも、CMSからリッチテキストでブログ投稿できるようにしたこと
 
 ・価格表ページ  
