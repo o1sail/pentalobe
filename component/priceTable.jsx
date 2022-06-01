@@ -78,7 +78,7 @@ export default function PriceTable({ pd }) {
                     margin: 0;
                     padding: 0;
                     font-size: 15px;
-                    line-height: 30px; /*一時(fontsize)*/
+                    line-height: 30px;
                     color: black;
                 }
 

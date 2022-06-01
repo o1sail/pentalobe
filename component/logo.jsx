@@ -19,18 +19,6 @@ export default function Logo() {
                                 alt="出張 郵送 スマホ修理 ペンタローブ"
                             />
                         </h1>
-                        {/* <div className="logoImgC">
-                            <Image
-                                src="/logo.png"
-                                width={180}
-                                height={30}
-                                layout="responsive"
-                                objectFit="contain"
-                                quality={50}
-                                unoptimized={true}
-                                alt=""
-                            />
-                        </div> */}
                         <div>
                             <p>出張/郵送</p>
                             <p>スマホ修理</p>

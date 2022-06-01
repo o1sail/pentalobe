@@ -1,4 +1,3 @@
-//import React, { useState, useEffect } from "react";
 import React, { useState } from "react";
 
 import NavigationMenu from "../component/navigationMenu";
@@ -84,7 +83,6 @@ export default function Layout({ children }) {
 
                     transition: 1s;
                     background-color: white;
-                    //background-color: green;
                 }
                 .hideContent {
                     transform: translateX(-100%);

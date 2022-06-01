@@ -41,7 +41,6 @@ export default function BlogList({ blog }) {
                 ul {
                     width: 100%;
                     height: fit-content;
-                    //margin-bottom: calc(2.5vh - 2.5vw);
                     margin-bottom: 2.5vh;
                 }
 
