@@ -14,7 +14,7 @@ export default function Logo() {
                                 height={30}
                                 layout="responsive"
                                 objectFit="contain"
-                                quality={50}
+                                quality={20}
                                 unoptimized={true}
                                 alt="出張 郵送 スマホ修理 ペンタローブ"
                             />
