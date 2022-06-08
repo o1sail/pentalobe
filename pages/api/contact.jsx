@@ -7,10 +7,8 @@ export default async (req, res) => {
         port: 465,
         secure: true,
         auth: {
-            //user: process.env.SMTP_USER,
-            //pass: process.env.SMTP_PASSWORD,
-            user: "pentalobe.repair@gmail.com",
-            pass: "kyxubgndoydesudo",
+            user: process.env.SMTP_USER,
+            pass: process.env.SMTP_PASSWORD,
         },
     });
 
@@ -49,6 +47,8 @@ export default async (req, res) => {
             <p>
                 お問い合わせありがとうございます。<br>
                 以下の内容でお問い合わせを承りました。
+                追ってまたご連絡いたしますのでしばらくお待ちください。
+                当メールは自動で送信しております。
             </p>
             <p>-----------------------------------------</p>
             <p>お問い合わせ内容</p>

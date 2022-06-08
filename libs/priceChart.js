@@ -1,6 +1,3 @@
-//このテンプレートに従えば、誰でも値段変更可能
-
-
 export const priceChartData = [
     {
         "iPhone": [
