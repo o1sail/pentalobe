@@ -1,34 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## タイトル
 
-## Getting Started
+Pentalobe
 
-First, run the development server:
+## 概要
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+HTML/CSS/JavaScript/React/Next.jsの理解を深めるために作成した、架空の出張/郵送対応のiPhone修理のWEBサイトです。  
+最もミニマル機能と、コンセプチュアルで合理的なデザインを意識して作りました。  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## URL
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+https://pentalobe.vercel.app/
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 使用技術
+  
+・HTML  
+・CSS  
+・JavaScript  
+・React  
+・NEXT.JS  
+・microCMS  
+・Vercel  
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## エピソードとメモ
 
-## Learn More
+・開発当初はフレームワークとしてGatsby.jsとCMSとしてContentfulを使用していましたが、Gatsby.jsの参考記事がまだ少なかった上、Contentfulに投稿したリッチテキストが反映されませんでした。その原因としてContentfulが日本語でのリッチテキスト投稿を想定していなかったためでした。
+(参考:https://zenn.dev/take77/articles/a266a75bf12c23)
 
-To learn more about Next.js, take a look at the following resources:
+・CMSとしてContentfulでのデータ投稿は辞め、代わりにWordPressを選定しある程度開発していたが、ヘッドレス化するのが面倒だったため、CMSをmicro
+CMSに変更しました。そのタイミングで、フレームワークもNext.jsに変更しました。その理由として、Next.jsの方がメジャーであり、拡張性が高く感じたためです。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+・ここで、多くの時間を無駄にしてしまいましたが、GraphQLの知識が身についたのは自分なりにポジティブに捉えています。
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+・Next.jsのSSR/SSGを理解するのに時間がかかりましたが、理解してしまえばとても便利なものだと感じます。またファイルベースルーティングの仕組みは個人的にとても好きです。
 
-## Deploy on Vercel
+・Next.jsの画像最適化はとても便利な昨日に感じますが、不便な点もありました。CMS上にある画像には使えない点と、スタイルを当てる際にImageタグに直接スタイルを当てれない点です。そのほかにも色々ありましたが、それを差し置いても画像最適化はメリットが多いように感じます。
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+・コンポーネントの部品の多くにMUIを使用していましたが、カスタマイズ性が低いことに不満がありました。やろうと思えば自分好みにカスタマイズできましたが、それ以上に学習コストとコードの記述量が増えてしまいます。そこで自身の勉強も兼ねて、MUIで作成していた部品を全て自前で作り直す事にしました。
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+・一から部品を作り直して、ページネーション、オートコンプリート、テーブル関係はとても面倒に感じました。
+
+・「ブログ」ページにカテゴリー検索の機能も設けようと思いましたが、microCMSの仕様上、実装はできるがとても汎用性が低かったため、実装は諦めました。
+
+・「価格表」ページのデータはlibsファイル下のpriceChart.jsを参照しています。価格変更や新モデル追加は初見でも直感的にわかるように作成しました。
+
+・「お問い合わせ」ページのお問い合わせフォームは自動返信機能が備わっています。
+
+・モバイル版で右上、タブレット版(縦)で左上に表示される回る灰色の星が刻印されたボタンは、メニューボタンです。メニューボタンはiPhoneを分解する際に最初に開けるペンタローブネジ(充電口の両隣にある星穴のネジ)を模してデザインしております。
+
+・モバイルでの閲覧は、iPhoneのフロントパネルを開くようなデザインとなっております。タブレットでの閲覧はportrait(縦)の場合のみiPadのフロントパネルが開くかのようにデザインしてあります。
+
+・スタイリング面のサイズ指定に関して、極力ピクセル指定はせずvwとvhで指定しております。
+
+
+## 注意点　　
+  
+・「ホーム」ページのカルーセルのiPhoneの枠の画像の中には何も差し込まれておりません。  
+・「修理の流れ」ページのiPhoneの枠の画像の中には何も差し込まれておりません。  
+・SNSアカウントは作成していないため、SNSアイコンをクリックしても各SNSには遷移されません。  
